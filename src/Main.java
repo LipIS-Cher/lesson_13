@@ -19,7 +19,7 @@ public class Main {
         int yearPublication = yearPublic.nextInt();
 
         Author author = new Author(firstName, lastName);
-        Book book = new Book(bookName, yearPublication);
+        Book book = new Book(bookName, yearPublication, author);
 
         System.out.println("author.getFirstName() = " + author.getFirstName());
         System.out.println("author.getLastName() = " + author.getLastName());
