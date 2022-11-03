@@ -18,11 +18,10 @@ public class Author {
     }
 
     public boolean equals(Object other) {
-        if (this.getClass() != other.getClass()) {
-            return false;
-        }
+        if (this == other) return true;
+        if (other == null || this.getClass() != other.getClass()) return false;
         Author c2 = (Author) other;
-        return firstName.equals(c2.firstName);
+        return lastName.equals(c2.lastName);
     }
 
     @Override
@@ -32,6 +31,6 @@ public class Author {
 
     @Override
     public int hashCode() {
-        return Objects.hash(firstName);
+        return Objects.hash(firstName, lastName);
     }
 }
