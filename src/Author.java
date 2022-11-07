@@ -20,8 +20,8 @@ public class Author {
     public boolean equals(Object other) {
         if (this == other) return true;
         if (other == null || this.getClass() != other.getClass()) return false;
-        Author c2 = (Author) other;
-        return lastName.equals(c2.lastName);
+        Author author = (Author) other;
+        return Objects.equals(firstName, author.firstName) && Objects.equals(lastName, author.lastName);
     }
 
     @Override

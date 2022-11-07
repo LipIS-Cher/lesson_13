@@ -27,8 +27,8 @@ public class Book {
     public boolean equals(Object other) {
         if (this == other) return true;
         if (other == null || this.getClass() != other.getClass()) return false;
-        Book c2 = (Book) other;
-        return bookName.equals(c2.bookName);
+        Book book = (Book) other;
+        return Objects.equals(bookName, book.bookName) && Objects.equals(yearPublication, book.yearPublication) && Objects.equals(author, book.author);
     }
 
     @Override
